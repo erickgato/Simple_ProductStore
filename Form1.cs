@@ -11,8 +11,7 @@ namespace ErickAula1
 {
     public partial class CadastroProduto : Form
     {
-        private string Produto;
-        private int index = 1;
+        private List<string> Produtos = new List<string>();
         public CadastroProduto()
         {
             InitializeComponent();
@@ -33,15 +32,33 @@ namespace ErickAula1
         {
             
         }
-
+        void SelectProdutos(List<string> Produto)
+        {
+            for (int index = 0; index < Produto.Count; index++)
+            {
+                L_Content.Items.Add(Produto[index] + ":" +  index);
+            }
+        }
         private void But_Enviar_Click(object sender, EventArgs e)
         {
-            Produto = Input_Produto.Text + "." + index;
-            Content.Text += Produto;
-            Content.Text += System.Environment.NewLine;
-            Content.Text += "____________________________" + System.Environment.NewLine;
-            index++;
+            if (Input_Produto.Text == "")
+                return;
+            L_Content.Items.Clear();
+            Produtos.Add(Input_Produto.Text);
+            SelectProdutos(Produtos);
             Input_Produto.Text = "";
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+        
+        private void But_Delete_Click(object sender, EventArgs e)
+        {
+            Produtos.RemoveAt(L_Content.SelectedIndex);
+            L_Content.Items.Clear();
+            SelectProdutos(Produtos);
         }
     }
 }
