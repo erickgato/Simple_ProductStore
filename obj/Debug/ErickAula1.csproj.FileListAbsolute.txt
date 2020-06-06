@@ -1,0 +1,10 @@
+C:\Users\Maria\Documents\TecDesenvolvimentoC#\Aula1\Erick\ErickAula1\bin\Debug\ErickAula1.exe.config
+C:\Users\Maria\Documents\TecDesenvolvimentoC#\Aula1\Erick\ErickAula1\bin\Debug\ErickAula1.exe
+C:\Users\Maria\Documents\TecDesenvolvimentoC#\Aula1\Erick\ErickAula1\bin\Debug\ErickAula1.pdb
+C:\Users\Maria\Documents\TecDesenvolvimentoC#\Aula1\Erick\ErickAula1\obj\Debug\ErickAula1.csprojAssemblyReference.cache
+C:\Users\Maria\Documents\TecDesenvolvimentoC#\Aula1\Erick\ErickAula1\obj\Debug\ErickAula1.Properties.Resources.resources
+C:\Users\Maria\Documents\TecDesenvolvimentoC#\Aula1\Erick\ErickAula1\obj\Debug\ErickAula1.csproj.GenerateResource.cache
+C:\Users\Maria\Documents\TecDesenvolvimentoC#\Aula1\Erick\ErickAula1\obj\Debug\ErickAula1.csproj.CoreCompileInputs.cache
+C:\Users\Maria\Documents\TecDesenvolvimentoC#\Aula1\Erick\ErickAula1\obj\Debug\ErickAula1.exe
+C:\Users\Maria\Documents\TecDesenvolvimentoC#\Aula1\Erick\ErickAula1\obj\Debug\ErickAula1.pdb
+C:\Users\Maria\Documents\TecDesenvolvimentoC#\Aula1\Erick\ErickAula1\obj\Debug\ErickAula1.CadastroProduto.resources
