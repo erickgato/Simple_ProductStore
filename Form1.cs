@@ -51,6 +51,11 @@ namespace ErickAula1
                 Produtos.Add(Input_Produto.Text);
             else
             {
+                if(L_Content.SelectedIndex < 0)
+                {
+                    Alter = false;
+                    return;
+                }
                 ActualAlter = new Alter(L_Content.SelectedIndex, Input_Produto.Text);
                 Produtos[ActualAlter.GetIndex] = ActualAlter.GetProduct;
                 Alter = false;
