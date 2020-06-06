@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ErickAula1.AlterProduct;
 namespace ErickAula1
 {
     public partial class CadastroProduto : Form
     {
         private List<string> Produtos = new List<string>();
+        protected bool Alter = false;
+        public Alter ActualAlter;
         public CadastroProduto()
         {
             InitializeComponent();
@@ -43,8 +46,16 @@ namespace ErickAula1
         {
             if (Input_Produto.Text == "")
                 return;
+            
+            if (!Alter)
+                Produtos.Add(Input_Produto.Text);
+            else
+            {
+                ActualAlter = new Alter(L_Content.SelectedIndex, Input_Produto.Text);
+                Produtos[ActualAlter.GetIndex] = ActualAlter.GetProduct;
+                Alter = false;
+            }
             L_Content.Items.Clear();
-            Produtos.Add(Input_Produto.Text);
             SelectProdutos(Produtos);
             Input_Produto.Text = "";
         }
@@ -56,9 +67,20 @@ namespace ErickAula1
         
         private void But_Delete_Click(object sender, EventArgs e)
         {
+            if (L_Content.SelectedIndex < 0)
+                return;
             Produtos.RemoveAt(L_Content.SelectedIndex);
             L_Content.Items.Clear();
             SelectProdutos(Produtos);
+        }
+
+        private void But_Alterar_Click(object sender, EventArgs e)
+        {
+            if (L_Content.SelectedIndex < 0)
+                return;
+            Input_Produto.Text = Produtos[L_Content.SelectedIndex];
+            Alter = true;
+            
         }
     }
 }

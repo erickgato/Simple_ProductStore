@@ -36,12 +36,14 @@
             this.But_Enviar = new Gradient.Gradient_Button();
             this.Input_Produto = new System.Windows.Forms.TextBox();
             this.Texto1 = new System.Windows.Forms.Label();
+            this.But_Alterar = new Gradient.Gradient_Button();
             this.panelGradient1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelGradient1
             // 
             this.panelGradient1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panelGradient1.Controls.Add(this.But_Alterar);
             this.panelGradient1.Controls.Add(this.But_Delete);
             this.panelGradient1.Controls.Add(this.L_Content);
             this.panelGradient1.Controls.Add(this.label1);
@@ -143,6 +145,25 @@
             this.Texto1.TabIndex = 1;
             this.Texto1.Text = "Product: ";
             // 
+            // But_Alterar
+            // 
+            this.But_Alterar.AutoSize = true;
+            this.But_Alterar.BackColor = System.Drawing.Color.Transparent;
+            this.But_Alterar.CorBaixo = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(138)))), ((int)(((byte)(229)))));
+            this.But_Alterar.CorCima = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.But_Alterar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.But_Alterar.FlatAppearance.BorderSize = 3;
+            this.But_Alterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.But_Alterar.Font = new System.Drawing.Font("NSimSun", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.But_Alterar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.But_Alterar.Location = new System.Drawing.Point(390, 140);
+            this.But_Alterar.Name = "But_Alterar";
+            this.But_Alterar.Size = new System.Drawing.Size(146, 39);
+            this.But_Alterar.TabIndex = 10;
+            this.But_Alterar.Text = "Alter";
+            this.But_Alterar.UseVisualStyleBackColor = false;
+            this.But_Alterar.Click += new System.EventHandler(this.But_Alterar_Click);
+            // 
             // CadastroProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +193,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox L_Content;
         private Gradient.Gradient_Button But_Delete;
+        private Gradient.Gradient_Button But_Alterar;
     }
 }
 
