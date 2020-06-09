@@ -22,7 +22,7 @@ namespace ErickAula1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Input_Produto.Focus();
         }
 
         private void panelGradient1_Paint(object sender, PaintEventArgs e)
@@ -33,7 +33,6 @@ namespace ErickAula1
 
         private void Content_TextChanged(object sender, EventArgs e)
         {
-            
         }
         void SelectProdutos(List<string> Produto)
         {
@@ -42,16 +41,16 @@ namespace ErickAula1
                 L_Content.Items.Add(Produto[index] + ":" +  index);
             }
         }
-        private void But_Enviar_Click(object sender, EventArgs e)
+        void Enviar()
         {
             if (Input_Produto.Text == "")
                 return;
-            
+
             if (!Alter)
                 Produtos.Add(Input_Produto.Text);
             else
             {
-                if(L_Content.SelectedIndex < 0)
+                if (L_Content.SelectedIndex < 0)
                 {
                     Alter = false;
                     return;
@@ -63,6 +62,11 @@ namespace ErickAula1
             L_Content.Items.Clear();
             SelectProdutos(Produtos);
             Input_Produto.Text = "";
+            Input_Produto.Focus();
+        }
+        private void But_Enviar_Click(object sender, EventArgs e)
+        {
+            Enviar();
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -85,7 +89,21 @@ namespace ErickAula1
                 return;
             Input_Produto.Text = Produtos[L_Content.SelectedIndex];
             Alter = true;
-            
+            Input_Produto.Focus();
+
+        }
+
+        private void But_Enviar_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+        }
+
+        private void Input_Produto_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Enviar();
+            }
         }
     }
 }

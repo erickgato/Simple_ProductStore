@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroProduto));
             this.panelGradient1 = new Gradient.PanelGradient();
+            this.But_Alterar = new Gradient.Gradient_Button();
             this.But_Delete = new Gradient.Gradient_Button();
             this.L_Content = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.But_Enviar = new Gradient.Gradient_Button();
             this.Input_Produto = new System.Windows.Forms.TextBox();
             this.Texto1 = new System.Windows.Forms.Label();
-            this.But_Alterar = new Gradient.Gradient_Button();
             this.panelGradient1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,25 @@
             this.panelGradient1.Size = new System.Drawing.Size(805, 464);
             this.panelGradient1.TabIndex = 0;
             this.panelGradient1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGradient1_Paint);
+            // 
+            // But_Alterar
+            // 
+            this.But_Alterar.AutoSize = true;
+            this.But_Alterar.BackColor = System.Drawing.Color.Transparent;
+            this.But_Alterar.CorBaixo = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(138)))), ((int)(((byte)(229)))));
+            this.But_Alterar.CorCima = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.But_Alterar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.But_Alterar.FlatAppearance.BorderSize = 3;
+            this.But_Alterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.But_Alterar.Font = new System.Drawing.Font("NSimSun", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.But_Alterar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.But_Alterar.Location = new System.Drawing.Point(390, 140);
+            this.But_Alterar.Name = "But_Alterar";
+            this.But_Alterar.Size = new System.Drawing.Size(146, 39);
+            this.But_Alterar.TabIndex = 10;
+            this.But_Alterar.Text = "Alter";
+            this.But_Alterar.UseVisualStyleBackColor = false;
+            this.But_Alterar.Click += new System.EventHandler(this.But_Alterar_Click);
             // 
             // But_Delete
             // 
@@ -121,6 +140,7 @@
             this.But_Enviar.Text = "Send";
             this.But_Enviar.UseVisualStyleBackColor = false;
             this.But_Enviar.Click += new System.EventHandler(this.But_Enviar_Click);
+            this.But_Enviar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.But_Enviar_KeyDown);
             // 
             // Input_Produto
             // 
@@ -132,6 +152,7 @@
             this.Input_Produto.Name = "Input_Produto";
             this.Input_Produto.Size = new System.Drawing.Size(242, 37);
             this.Input_Produto.TabIndex = 2;
+            this.Input_Produto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Input_Produto_KeyUp);
             // 
             // Texto1
             // 
@@ -144,25 +165,6 @@
             this.Texto1.Size = new System.Drawing.Size(188, 37);
             this.Texto1.TabIndex = 1;
             this.Texto1.Text = "Product: ";
-            // 
-            // But_Alterar
-            // 
-            this.But_Alterar.AutoSize = true;
-            this.But_Alterar.BackColor = System.Drawing.Color.Transparent;
-            this.But_Alterar.CorBaixo = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(138)))), ((int)(((byte)(229)))));
-            this.But_Alterar.CorCima = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.But_Alterar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.But_Alterar.FlatAppearance.BorderSize = 3;
-            this.But_Alterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.But_Alterar.Font = new System.Drawing.Font("NSimSun", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.But_Alterar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.But_Alterar.Location = new System.Drawing.Point(390, 140);
-            this.But_Alterar.Name = "But_Alterar";
-            this.But_Alterar.Size = new System.Drawing.Size(146, 39);
-            this.But_Alterar.TabIndex = 10;
-            this.But_Alterar.Text = "Alter";
-            this.But_Alterar.UseVisualStyleBackColor = false;
-            this.But_Alterar.Click += new System.EventHandler(this.But_Alterar_Click);
             // 
             // CadastroProduto
             // 
